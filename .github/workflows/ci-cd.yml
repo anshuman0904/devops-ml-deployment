@@ -28,3 +28,6 @@ jobs:
 
     - name: Build Docker image
       run: docker build -t iris-app ./app
+      
+    - name: Run Docker container
+      run: docker run -d -p 5000:5000 iris-app
