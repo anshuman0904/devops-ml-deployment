@@ -23,8 +23,8 @@ jobs:
 
     - name: Run basic test
       run: |
-        echo "Testing model load"
-        python -c "import joblib; joblib.load('app/iris_model.pkl')"
+        echo "Testing model and vectorizer load"
+        python -c "import joblib; model = joblib.load('mental_health_model.pkl'); vectorizer = joblib.load('tfidf_vectorizer.pkl')"
 
     - name: Build Docker image
       run: docker build -t iris-app ./app
