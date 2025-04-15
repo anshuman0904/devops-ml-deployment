@@ -27,4 +27,4 @@ jobs:
         python -c "import joblib; joblib.load('app/iris_model.pkl')"
 
     - name: Build Docker image
-      run: docker build -t iris-api .
+      run: docker build -t iris-app ./app
